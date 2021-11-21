@@ -10,7 +10,7 @@ function edificio(calle, numero, codigop) {
     this.numero = modificarNumero;
     this.codigop = modificarCodigoPostal;
     this.plantas = plantas;
-
+    this.arrayProp = new Array();
 
     document.write(+"<br>" + "Construido un nuevo edificio en la calle: " + this.calle + ", numero: " + this.numero + ", código postal: " + this.codigop);
 }
@@ -43,9 +43,13 @@ function agregarPlantasYPuertas(numplantas, puertas) {
     this.plantas = numplantas + this.plantas;
     this.puertas = puertas + this.puertas;
 
+    document.write(numplantas + "plantas añadidas" + puertas + " puertas añadidas");
+
 }
 
 function agregarPropietario(nombre, planta, puerta) {
+    this.arrayProp.push({ "nom": nombre, "planta": planta, "puerta": puerta });
+    document.write("propietario añadido");
 
 }
 
